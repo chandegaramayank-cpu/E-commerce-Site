@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: white;
+}
+
+.nav{
+    box-shadow: 0 0 2px ;
+    height: 60px;
+    background-color: white;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    backdrop-filter: blur(20px);
+    position: fixed;  
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+
+.logo{
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-size: 35px;
+    font-style: normal;
+}
+
+.logBtn:hover{
+    background-color: rgb(241, 150, 22);
+    transition: 0.2s ease-out;
+}
+
+
+.mainHero{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    /* background-color: red; */
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    top: 100px;
+}
+
+.heroText{
+    width: 50%;
+    font-size: 70px;
+    text-align: center;
+}
+
+.ExploreNow{
+    background-color: rgb(240, 177, 0);
+    height: 50px;
+    width: 200px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+
+
+.owl-carousel .item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+
+@media (max-width: 768px){
+    .heroText{
+        width: 90%;
+        font-size: 40px;
+    }
+}
