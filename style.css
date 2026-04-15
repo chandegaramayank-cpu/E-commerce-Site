@@ -9,12 +9,15 @@ body{
 }
 
 .nav{
+  /* padding-left: 40px;
+  padding-right: 50px; */
+
     box-shadow: 0 0 2px ;
-    height: 60px;
+    height: 40px;
     background-color: white;
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
     position: fixed;  
     top: 0;
     left: 0;
@@ -22,21 +25,26 @@ body{
     z-index: 1000;
 }
 
-
 .logo{
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
-    font-size: 35px;
+    font-size: 25px;
     font-style: normal;
+}
+
+.logBtn{
+  height: 30px;
+  width: 70px;
+  font-size: 15px;
 }
 
 .logBtn:hover{
     background-color: rgb(241, 150, 22);
-    transition: 0.2s ease-out;
+    transition: 0.1s ease-out;
 }
 
 
-.mainHero{
+.main{
     position: relative;
     width: 100%;
     height: 500px;
@@ -56,10 +64,13 @@ body{
 
 .ExploreNow{
     background-color: rgb(240, 177, 0);
-    height: 50px;
-    width: 200px;
-    font-size: 20px;
-    border: 2px solid black;
+    height: 40px;
+    width: 150px;
+    font-size: 15px;
+    border: 1px solid black;
+}
+.ExploreNow:hover{
+  background-color: rgb(241, 150, 22);
 }
 
 
@@ -70,10 +81,116 @@ body{
 }
 
 
+.product-line{
+  height: 800px;
+  width: auto;
+  margin-top: 15px;
+  text-align: center;
+  /* background-color: rgb(117, 86, 86); */
+}
+#top-line{
+  text-align: center;
+  margin-left: 60px;
+  padding-top: 40px;
+  font-size: 40px;
+}
+#top-line2{
+  text-align: center;
+  margin-left: 60px;
+  font-size: 20px;
+}
 
-@media (max-width: 768px){
+
+.product-card{
+  height: 100px;
+  background-color: red;
+}
+
+
+
+
+
+
+/*carousel--------------------------------------------------------- */
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.slider {
+  padding-block: 12px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent 20% 80%, #000, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000, transparent);
+}
+
+.list {
+  display: flex;
+  width: calc(
+    var(--width) * var(--imageQuantity) * 2
+  ); /* Double the width for seamless looping */
+  gap: calc(var(--width) / 4);
+  animation: autoScroll 20s linear infinite;
+}
+
+.list:hover {
+  animation-play-state: paused !important;
+}
+
+.item {
+  width: var(--width);
+  height: var(--height);
+  flex-shrink: 0;
+}
+
+.item img {
+  width: 100%;
+  height: 100%;
+  transition: filter 0.5s ease-in-out;
+}
+
+@keyframes autoScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-1 * var(--width) * var(--imageQuantity)));
+  }
+}
+
+.slider[reverse="true"] .list {
+  animation: reverseScroll 20s linear infinite;
+}
+
+@keyframes reverseScroll {
+  0% {
+    transform: translateX(calc(-1 * var(--width) * var(--imageQuantity)));
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.slider:hover .item img {
+  filter: grayscale(1);
+}
+
+.slider .item:hover img {
+  filter: grayscale(0);
+}
+
+
+
+
+
+/* @media (max-width: 768px){
     .heroText{
         width: 90%;
         font-size: 40px;
     }
-}
+} */
